@@ -1,4 +1,4 @@
-package main
+package 分治思想
 
 import (
 	"fmt"
