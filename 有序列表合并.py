@@ -29,6 +29,6 @@ def hb(list1,list2):
     print(result)
     return result
 
-list1 = [3,4,7,9,11]
-list2 = [1,2,5,8,13,20]
+list2 = [3,4,7,9,20]
+list1 = [1,2,5,8,13,11]
 hb(list1, list2)

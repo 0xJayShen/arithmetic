@@ -5,6 +5,7 @@
 #coinsUsed   对应于目前钱币总数i所使用的硬币数目
 # 如果我们有面值为1元、3元和5元的硬币若干枚，如何用最少的硬币凑够11元？
 def coinChange(values,valuesCounts,money,coinsUsed):
+
     #遍历出从1到money所有的钱数可能
     for cents in range(1,money+1):
         minCoins = cents
