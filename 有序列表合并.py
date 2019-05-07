@@ -32,3 +32,28 @@ def hb(list1,list2):
 list2 = [3,4,7,9,20]
 list1 = [1,2,5,8,13,11]
 hb(list1, list2)
+test1 = [1,2,5,7,9]
+test2=[2,4,6,8,10,11,34,55]
+
+
+def mergetest(test1,test2):
+  result =[]
+  len1=len(test1)
+  len2=len(test2)
+  i=0
+  j=0
+  while i<len1 and j<len2:
+    if test1[i]<=test2[j]:
+      result.append(test1[i])
+      i+=1
+    else:
+      result.append(test2[j])
+      j+=1
+  if i<len1:
+    for z in range(i+1,len1):
+      result.append(test1[z])
+  elif j<len2:
+    for z in range(j+1,len2):
+      result.append(test2[z])
+  return result
+print mergetest(test1,test2)
