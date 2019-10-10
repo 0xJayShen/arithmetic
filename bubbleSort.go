@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-func bubbleSort(my_list []int) []int{
-	fmt.Println(my_list)
-	for i:=0;i<len(my_list);i++{
-		for j:=i+1;j<len(my_list);j++{
-			if my_list[i]>my_list[j]{
-				my_list[i],my_list[j] = my_list[j],my_list[i]
+func bubble(myList []int) []int {
+	myListLength := len(myList)
+	for i := 0; i < myListLength; i++ {
+		for j := 0; j < myListLength; j++ {
+			if myList[i]< myList[j]{
+				myList[j],myList[i] = myList[i],myList[j]
 			}
 		}
 	}
-	fmt.Println(my_list)
-	return my_list
+	fmt.Println(myList)
+	return myList
 }
 
-func main(){
-	bubbleSort([]int{3,56,324,56,562,2123,1})
+func main() {
+bubble([]int{3,56,324,56,562,2123,1})
 }
