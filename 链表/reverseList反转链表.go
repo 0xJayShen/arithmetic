@@ -20,3 +20,15 @@ func reverseList(head *ListNode) *ListNode{
 	}
 	return newHead
 }
+//https://www.cnblogs.com/TimLiuDream/p/9932494.html
+pre是cur的最前面那位（pre = cur）
+cur就是当前位的后面链表元素（cur = cur.Next）
+cur.Next肯定是接pre（cur.Next = pre）
+func reversrList(head *ListNode) *ListNode {
+    cur := head
+    var pre *ListNode = nil
+    for cur != nil {
+        pre, cur, cur.Next = cur, cur.Next, pre //这句话最重要
+    }
+    return pre
+}
