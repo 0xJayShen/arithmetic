@@ -21,7 +21,6 @@ func searchMatrix(matrix [][]int, target int) bool {
 	row := 0
 	col := len(matrix[0]) - 1
 	for col >= 0 && row <= len(matrix)-1 {
-		fmt.Println(matrix[row][col])
 		if matrix[row][col] == target {
 			return true
 		} else if matrix[row][col] > target {
